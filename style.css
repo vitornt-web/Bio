@@ -1,0 +1,52 @@
+.cabeçalho {
+  display: flex;
+  gap: 16px; /* espaçamento entre os itens */
+  list-style: none; /* remove os marcadores */
+  padding: 0;
+  margin: 25;
+}
+
+p{
+    color: white;
+    padding: 10px;
+    text-align: justify;
+}
+
+header h1{
+    color: #ffffff !important;
+  margin-bottom: 4px;
+}
+
+header p{
+    color: #ffffff;
+  margin: 0;
+}
+
+header{
+    background-color: #061426;
+    display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sobre{
+    text-align: justify;
+    margin: 15px;
+}
+.sobre p{
+    color: #061426;
+}
+
+.tab-content > .tab-pane:not(.active) {
+  display: none !important;
+}
+
+.tab-pane:not(.active) {
+  display: none !important;
+}
