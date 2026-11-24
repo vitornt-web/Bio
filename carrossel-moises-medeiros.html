@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Curso de Química Moisés Medeiros – Cupom VITOR85</title>
+<title>Curso de Química Moisés Medeiros – Cupom VITORMED</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -14,7 +14,7 @@
   --lime:#c6ff1a; --text:#fff; --muted:#d9bfca;
 }
 *{box-sizing:border-box;margin:0}
-body{background:transparent;color:var(--text);font-family:Inter,system-ui,sans-serif;display:flex;justify-content:center;padding:24px 12px}
+body{background:transparent;color:var(--text);font-family:Inter,system-ui,sans-serif;display:flex;justify-content:center;padding:8px 0}
 .wrap{width:100%;max-width:480px;margin:0 auto}
 .carousel{position:relative}
 .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;border-radius:18px;scrollbar-width:none}
@@ -64,7 +64,7 @@ h2{line-height:1.05}
 
 /* ===== Telas maiores: tablet e computador (horizontal) ===== */
 @media (min-width:700px){
-  body{padding:24px clamp(12px,3vw,40px)}
+  body{padding:8px 0}
   .wrap{max-width:1200px}
   .slide{aspect-ratio:16/9;padding:40px 72px}
   .slide::after{width:130px;height:55px;top:28px;right:40px}
@@ -138,6 +138,30 @@ h2{line-height:1.05}
   .dots button{background:rgba(255,255,255,.4)}
   .dots button[aria-current="true"]{background:var(--pink2)}
 }
+
+/* ===== Ajuste de altura e slide final ===== */
+.final{justify-content:center;align-items:center;text-align:center}
+.final-esq,.final-dir{width:100%}
+.final .avatar{margin:0 auto 10px}
+.final .coupon{margin-top:12px}
+@media (min-width:700px){
+  .wrap{max-width:1100px}
+  .slide{aspect-ratio:auto;min-height:clamp(400px,36vw,500px)}
+}
+@media (min-width:900px){
+  .final{flex-direction:row;gap:clamp(32px,6vw,90px);text-align:left;padding-right:72px}
+  .final-esq{flex:1.1;text-align:left}
+  .final .avatar{margin:0 0 14px}
+  .final-dir{flex:1;text-align:center}
+  .final .coupon{margin-top:0}
+}
+
+/* cupom com 8 letras: garante que cabe */
+.coupon strong{font-size:clamp(34px,11vw,56px);letter-spacing:2px;white-space:nowrap}
+@media (min-width:700px){
+  .slide.cover .coupon strong{font-size:clamp(28px,3.4vw,52px)}
+  .final .coupon strong{font-size:clamp(38px,4.4vw,56px)}
+}
 @media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}}
 </style>
 </head>
@@ -154,7 +178,7 @@ h2{line-height:1.05}
         <p class="lead">Uma plataforma completa para estudar Química para o ENEM e vestibulares.</p>
         <div class="coupon">
           <small>Use o cupom de desconto</small>
-          <strong>VITOR85</strong>
+          <strong>VITORMED</strong>
         </div>
         <p class="hint">Arraste para ver o que você leva →</p>
       </section>
@@ -224,17 +248,21 @@ h2{line-height:1.05}
       </section>
 
       <!-- 7. CTA -->
-      <section class="slide final" style="justify-content:center;text-align:center;align-items:center">
-        <div class="avatar" role="img" aria-label="Professor Moisés Medeiros"></div>
-        <span class="tag">Para quem vai estudar em 2027</span>
-        <h2>Comece com <mark>desconto</mark></h2>
-        <div class="coupon" style="width:100%;margin-top:6px">
-          <small>Cupom de desconto</small>
-          <strong id="code">VITOR85</strong>
+      <section class="slide final">
+        <div class="final-esq">
+          <div class="avatar" role="img" aria-label="Professor Moisés Medeiros"></div>
+          <span class="tag">Para quem vai estudar em 2027</span>
+          <h2>Comece com <mark>desconto</mark></h2>
         </div>
-        <button class="btn" id="copy" type="button">Copiar cupom</button>
-        <!-- TROQUE o href pelo seu link de afiliado, se tiver um -->
-        <a class="btn" href="https://www.moisesmedeiros.com.br" target="_blank" rel="noopener sponsored" style="margin-top:10px">Comprar o curso</a>
+        <div class="final-dir">
+          <div class="coupon">
+            <small>Cupom de desconto</small>
+            <strong id="code">VITORMED</strong>
+          </div>
+          <button class="btn" id="copy" type="button">Copiar cupom</button>
+          <!-- TROQUE o href pelo seu link de afiliado, se tiver um -->
+          <a class="btn" href="https://www.moisesmedeiros.com.br" target="_blank" rel="noopener sponsored" style="margin-top:10px">Comprar o curso</a>
+        </div>
       </section>
 
     </div>
@@ -304,7 +332,7 @@ h2{line-height:1.05}
   var copy=document.getElementById('copy');
   copy.onclick=function(){
     var done=function(){copy.textContent='Cupom copiado!';setTimeout(function(){copy.textContent='Copiar cupom'},2000)};
-    if(navigator.clipboard){navigator.clipboard.writeText('VITOR85').then(done,done)}else{done()}
+    if(navigator.clipboard){navigator.clipboard.writeText('VITORMED').then(done,done)}else{done()}
   };
 })();
 </script>
