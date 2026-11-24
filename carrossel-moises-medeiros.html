@@ -162,6 +162,13 @@ h2{line-height:1.05}
   .slide.cover .coupon strong{font-size:clamp(28px,3.4vw,52px)}
   .final .coupon strong{font-size:clamp(38px,4.4vw,56px)}
 }
+
+/* dois acessos: online e físico */
+.acessos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:10px}
+.acessos .btn{margin-top:0}
+.btn.sec{background:transparent;color:var(--lime);border:2px solid var(--lime)}
+.btn.sec:hover{background:rgba(198,255,26,.12)}
+@media (min-width:900px){.final{padding-top:96px;padding-bottom:40px}}
 @media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}}
 </style>
 </head>
@@ -260,8 +267,10 @@ h2{line-height:1.05}
             <strong id="code">VITORMED</strong>
           </div>
           <button class="btn" id="copy" type="button">Copiar cupom</button>
-          <!-- TROQUE o href pelo seu link de afiliado, se tiver um -->
-          <a class="btn" href="https://www.moisesmedeiros.com.br" target="_blank" rel="noopener sponsored" style="margin-top:10px">Comprar o curso</a>
+          <div class="acessos">
+            <a class="btn" href="https://www.moisesmedeiros.com.br/cadastro-produto-digital" target="_blank" rel="noopener sponsored">Material online</a>
+            <a class="btn sec" href="https://www.moisesmedeiros.com.br/cadastro-produto-fisico" target="_blank" rel="noopener sponsored">Material físico</a>
+          </div>
         </div>
       </section>
 
